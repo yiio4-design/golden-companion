@@ -732,6 +732,97 @@ hr {
 
 
 # ==========================================
+# GOLDEN VOYAGER RINGED PLANET
+# ==========================================
+
+st.markdown("""
+<style>
+
+/* Glowing golden planet behind the heading */
+
+.stApp::before {
+    content: "";
+    position: fixed;
+    top: 11%;
+    right: 12%;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 32% 28%,
+            #fff1b5 0%,
+            #f6ca69 16%,
+            #c28a32 43%,
+            #6d421d 72%,
+            #24182a 100%
+        );
+
+    box-shadow:
+        0 0 35px rgba(245, 190, 70, 0.5),
+        0 0 90px rgba(245, 190, 70, 0.2),
+        inset -25px -20px 40px rgba(0, 0, 0, 0.5);
+
+    opacity: 0.65;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Golden rings */
+
+.stApp::after {
+    content: "";
+    position: fixed;
+    top: calc(11% + 105px);
+    right: calc(12% - 65px);
+
+    width: 410px;
+    height: 85px;
+
+    border: 13px solid rgba(239, 191, 91, 0.65);
+    border-left-color: rgba(255, 228, 152, 0.85);
+    border-bottom-color: rgba(174, 113, 35, 0.45);
+
+    border-radius: 50%;
+    transform: rotate(-24deg);
+
+    box-shadow: 0 0 20px rgba(238, 178, 65, 0.2);
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Keep chatbot content above the planet */
+
+[data-testid="stMainBlockContainer"] {
+    position: relative;
+    z-index: 1;
+}
+
+/* Smaller planet on phones */
+
+@media (max-width: 768px) {
+    .stApp::before {
+        width: 150px;
+        height: 150px;
+        top: 12%;
+        right: 7%;
+    }
+
+    .stApp::after {
+        width: 220px;
+        height: 48px;
+        top: calc(12% + 55px);
+        right: calc(7% - 38px);
+        border-width: 7px;
+    }
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+# ==========================================
 # 6. MAIN HEADER
 # ==========================================
 
