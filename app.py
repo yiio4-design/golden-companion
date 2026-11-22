@@ -26,7 +26,7 @@ rocket_info = {
     "name": "Golden Voyager",
     "chatbot": "Golden Companion",
     "bottle": "1.5-liter Mountain Dew soda bottle",
-    "length": "50 centimeters",
+    "length": "45 centimeters",
     "distance": "41.8 meters",
     "angle": "45 degrees",
     "fin_shape": "Tapered trapezoid",
@@ -79,7 +79,7 @@ final_model = """FINAL MODEL - GOLDEN VOYAGER
 Our final rocket was based on Prototype 2, with improvements to meet the project requirements.
 
 DESIGN:
-We reduced the rocket's length from 55 centimeters to exactly 50 centimeters.
+We reduced the rocket's length from 55 centimeters to exactly 45 centimeters.
 
 We kept the 1.5-liter Mountain Dew soda bottle.
 
@@ -124,7 +124,7 @@ categories = {
         "What is the bottle's capacity?":
             "Our bottle has a capacity of 1.5 liters.",
         "How long is your rocket?":
-            "Our final Golden Voyager is exactly 50 centimeters long.",
+            "Our final Golden Voyager is exactly 45 centimeters long.",
         "What materials did you use?":
             "We used a reused Mountain Dew soda bottle, cardboard from a reused plate for the fins, plastic document folder sheets for the nose cone, and duct tape.",
         "How far did your rocket travel?":
@@ -170,7 +170,7 @@ categories = {
         "Why did you choose Prototype 2 for the final design?":
             "Prototype 2 performed well, so we kept most of its features while correcting the length and improving the fins.",
         "What changes did you make to the final rocket?":
-            "We reduced the length to 50 centimeters, made the fins thinner, and measured their placement more carefully.",
+            "We reduced the length to 45 centimeters, made the fins thinner, and measured their placement more carefully.",
         "What shape are the fins?":
             "Our fins have a tapered trapezoidal shape.",
         "Why did you choose trapezoidal fins?":
@@ -319,7 +319,7 @@ aliases = {
     ],
     "How long is your rocket?": [
         "rocket length", "how long",
-        "50 cm", "50 centimeters"
+        "45 cm", "45 centimeters"
     ],
     "What materials did you use?": [
         "what materials", "materials used",
@@ -571,6 +571,28 @@ def find_answer(question):
 # ==========================================
 
 PROJECT_KNOWLEDGE = f"""
+
+ROCKET DIMENSIONS:
+- Total rocket length: 45 cm.
+- Fin length: 10 cm.
+- Fin base width: 7 cm.
+- Fins begin tapering after 5 cm.
+- Fin shape: Tapered trapezoid.
+
+NOSE CONE DESIGN:
+Our rocket uses a long, smooth, symmetrical nose cone.
+A long pointed nose cone is not necessarily optimal
+for subsonic flight. A rounded nose cone can be more
+suitable, but at our rocket's relatively low speed,
+the difference is not very significant.
+Smoothness and symmetry are especially important.
+
+FIN DESIGN AND STABILITY:
+The fins were designed to help move the center of
+pressure backward, improving the rocket's stability.
+They were kept relatively small to reduce unnecessary
+air resistance while still providing stability.
+
 You are Golden Companion, a friendly AI
 assistant for the Golden Voyager water rocket.
 
@@ -643,7 +665,7 @@ IMPORTANT INSTRUCTIONS:
 10. Be friendly, professional, and helpful.
 
 11. Do not confuse the 1.5-liter bottle
-    capacity with the 50-centimeter
+    capacity with the 45-centimeter
     physical rocket length.
 
 12. The rocket traveled 41.8 meters.
